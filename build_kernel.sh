@@ -3,7 +3,7 @@
 WORKSPACE='/home/gd/workspace'
 LINUX="${WORKSPACE}/linux"
 
-find "${WORKSPACE}" -type f \( -name 'linux-*deb' -o -name 'linux-upstream*' \) -ctime +3 -exec rm {} \;
+find "${WORKSPACE}" -type f \( -name 'linux-*deb' -o -name 'linux-upstream*' \) -mtime +3 -exec rm {} \;
 
 cd "${LINUX}" || exit
 
